@@ -1,0 +1,1299 @@
+You are a senior creative frontend engineer, Three.js developer, technical artist, interaction designer, and technical lead.
+
+Build a polished interactive GitHub Pages experience called:
+
+# Multiverse Nexus
+
+The project should be an impressive cinematic exploration of the Marvel Cinematic Universe multiverse.
+
+Its primary goal is visual impact, atmosphere, motion, exploration, and interaction.
+
+It is not intended to be a complete encyclopedia or a text-heavy wiki.
+
+Information should be minimal and contextual:
+
+* universe or location name,
+* one short description,
+* current stability state,
+* relevant MCU project names,
+* one or two notable characters or events.
+
+The 3D environment must remain the main experience.
+
+I am attaching:
+
+1. A visual mockup showing the desired scale, mood, composition, lighting, dimensional spheres, and central multiverse nexus.
+2. Matt Pocock’s `/prototype` skill.
+
+Before implementation:
+
+* inspect the repository,
+* locate and read the attached `/prototype` skill,
+* inspect the mockup carefully,
+* identify the smallest convincing vertical prototype,
+* create a phased implementation plan based on vertical slices,
+* then immediately implement the first slice.
+
+Do not use the mockup as a flat background image.
+
+Interpret it as visual direction for:
+
+* composition,
+* atmosphere,
+* scale,
+* depth,
+* central hierarchy,
+* dimensional worlds,
+* cosmic energy paths,
+* camera framing,
+* cinematic lighting.
+
+---
+
+# Creative direction
+
+Create an unofficial, non-commercial MCU-inspired fan experience centred on the multiverse.
+
+The visual experience should feel connected to concepts seen across:
+
+* *Loki*,
+* *Doctor Strange in the Multiverse of Madness*,
+* *What If...?*,
+* *Spider-Man: No Way Home*,
+* *Avengers: Endgame*,
+* *Ant-Man and the Wasp: Quantumania*,
+* *Deadpool & Wolverine*,
+* other MCU projects involving timelines, dimensions, variants, or alternate realities.
+
+The experience may directly reference established MCU names, universes, locations, organizations, characters, films, series, artifacts, and major events.
+
+Use MCU screen canon as the primary reference.
+
+Do not silently mix MCU continuity with Marvel Comics continuity.
+
+Where MCU canon is uncertain or conflicting, do not invent a definitive answer. Keep uncertain details out of the main interface or mark them internally as unconfirmed.
+
+The experience must not present itself as an official Marvel or Disney product.
+
+Include a discreet footer disclaimer:
+
+> Multiverse Nexus is an unofficial, non-commercial fan project. Marvel, the Marvel Cinematic Universe, and all related properties belong to their respective owners. This project is not affiliated with or endorsed by Marvel Studios or Disney.
+
+---
+
+# Intellectual-property constraints
+
+The project may reference MCU titles, characters, locations, events, universes, and terminology.
+
+However:
+
+* do not bundle ripped film footage,
+* do not use soundtrack recordings,
+* do not copy official posters,
+* do not copy Marvel Studios title animations,
+* do not copy official logos exactly,
+* do not download or redistribute proprietary character models,
+* do not copy another fan site or wiki,
+* do not reproduce scripts or long dialogue,
+* do not create direct digital replicas of actors.
+
+Use:
+
+* original procedural Three.js visuals,
+* abstract silhouettes,
+* symbolic visual representations,
+* dimensional environments,
+* particles,
+* shaders,
+* generated geometry,
+* original interface design,
+* replaceable local placeholders where external artwork might later be added.
+
+The environment may strongly evoke the cinematic visual identity of the MCU multiverse while remaining an original web implementation.
+
+---
+
+# Product concept
+
+Multiverse Nexus is a cosmic observation platform suspended outside normal space and time.
+
+At its centre is a massive multiversal nexus:
+
+* a bright dimensional core,
+* rotating mechanical and energy rings,
+* branching timeline streams,
+* reality fragments,
+* luminous pathways,
+* orbiting dimensional spheres.
+
+Each dimensional sphere represents an established MCU universe, realm, location, or timeline concept.
+
+The user should be able to:
+
+* observe the complete multiverse,
+* hover over dimensional worlds,
+* select one,
+* smoothly travel toward it,
+* view a short cinematic representation,
+* trigger a nexus event,
+* watch realities destabilize,
+* restore or isolate a timeline,
+* return to the central nexus.
+
+The application should feel like an interactive cinematic installation, not like a normal information website.
+
+---
+
+# Visual hierarchy
+
+The scene should have three major visual layers.
+
+## Layer 1: Central Nexus
+
+The central nexus is always the dominant focal point.
+
+It should include:
+
+* a brilliant energy core,
+* concentric mechanical rings,
+* internal rotating structures,
+* temporal energy pulses,
+* dimensional distortion,
+* light beams,
+* branching pathways,
+* orbiting particles,
+* subtle reality fractures.
+
+It must feel active and powerful even when the user does nothing.
+
+## Layer 2: MCU Realities and Dimensions
+
+Several large dimensional spheres orbit around the nexus.
+
+Each sphere should have a clearly different identity.
+
+Possible initial set:
+
+* Sacred Timeline / Earth-616,
+* Earth-838,
+* the TVA,
+* the Void,
+* the Quantum Realm,
+* the Dark Dimension,
+* a *What If...?*-style branched reality,
+* an incursion-affected collapsing universe.
+
+Not every concept needs to be represented as a literal planet.
+
+For example:
+
+* the TVA may appear as a retro-futuristic temporal station outside the timeline,
+* the Void may appear as a broken wasteland surrounded by timeline debris,
+* the Quantum Realm may appear as a layered microscopic ecosystem,
+* the Dark Dimension may appear as a folded kaleidoscopic reality,
+* Earth-838 may appear as a clean advanced alternate Earth,
+* the Sacred Timeline may appear as a protected golden reality connected directly to the nexus.
+
+The visuals should be inspired by their MCU appearances, but created procedurally rather than copied from film assets.
+
+## Layer 3: Timeline Connections
+
+Reality spheres are connected to the nexus through:
+
+* glowing timeline paths,
+* moving particles,
+* energy ribbons,
+* branching streams,
+* unstable fractures,
+* incursion links.
+
+Connections must communicate state.
+
+Examples:
+
+* stable: smooth blue-gold flow,
+* branching: multiple diverging strands,
+* unstable: flickering violet-orange energy,
+* critical: fractured red pulses,
+* isolated: dim disconnected path,
+* collapsed: debris and fading particles.
+
+---
+
+# Minimal information design
+
+Keep text short.
+
+When no reality is selected, show only:
+
+* Multiverse Nexus,
+* current nexus state,
+* a short interaction hint,
+* one main action.
+
+When hovering a reality, show:
+
+* name,
+* one short category label,
+* stability percentage.
+
+When selecting a reality, show a compact panel containing:
+
+* name,
+* a description of no more than two short sentences,
+* status,
+* first or most relevant MCU project,
+* up to three associated characters or events,
+* one contextual action.
+
+Example actions:
+
+* Inspect branch,
+* Stabilize timeline,
+* Enter reality,
+* Isolate anomaly,
+* Observe incursion,
+* Return to Nexus.
+
+Do not create:
+
+* long articles,
+* full biographies,
+* large tables,
+* dense timelines,
+* encyclopedic pages,
+* dashboards filled with metrics,
+* large navigation menus.
+
+The interface must support the scene rather than compete with it.
+
+---
+
+# Required workflow
+
+## Step 1: Inspect before coding
+
+Before implementation:
+
+1. Inspect the repository and existing files.
+2. Locate and read the attached `/prototype` skill.
+3. Inspect the supplied mockup.
+4. Identify:
+
+   * the main focal point,
+   * the strongest visual elements,
+   * what can be built procedurally,
+   * which parts should be simplified,
+   * the largest performance risks,
+   * the smallest prototype that proves the experience works.
+
+Do not assume the repository is empty.
+
+Preserve useful existing conventions unless they conflict with the project goal.
+
+## Step 2: Create the vertical-slice plan
+
+Create:
+
+```text
+docs/vertical-slice-plan.md
+```
+
+The plan must include:
+
+* experience goal,
+* visual interpretation of the mockup,
+* MCU visual references,
+* technical approach,
+* major risks,
+* performance strategy,
+* asset strategy,
+* accessibility strategy,
+* proposed architecture,
+* acceptance criteria,
+* vertical slices.
+
+Do not structure the work as isolated technical layers such as:
+
+* build all Three.js objects,
+* then build all UI,
+* then add interactions.
+
+Each slice must produce a complete, demonstrable improvement containing the minimum necessary:
+
+* visuals,
+* state,
+* interaction,
+* interface,
+* validation.
+
+Use the following slices as the default plan.
+
+---
+
+# Vertical Slice 1 – Convincing Nexus Prototype
+
+Build the smallest version that already looks impressive.
+
+Include:
+
+* full-screen Three.js scene,
+* deep-space environment,
+* star field,
+* central glowing nexus,
+* at least two rotating nexus rings,
+* atmospheric particles,
+* three dimensional reality spheres,
+* timeline paths connecting them to the nexus,
+* subtle pointer-based camera movement,
+* one selectable reality,
+* one compact information panel,
+* reset view,
+* responsive layout.
+
+Suggested first three realities:
+
+* Sacred Timeline / Earth-616,
+* the Void,
+* the Quantum Realm.
+
+The three worlds must look meaningfully different.
+
+This slice should already feel like a cinematic prototype rather than a technical scene test.
+
+Acceptance criteria:
+
+* the central nexus dominates the composition,
+* all three realities are clearly readable,
+* hover and selection work,
+* camera focus is smooth,
+* the scene remains usable after resize,
+* the production build passes,
+* the page looks intentional on desktop and mobile.
+
+---
+
+# Vertical Slice 2 – MCU Multiverse Explorer
+
+Expand the experience with:
+
+* additional dimensional realities,
+* improved procedural environments,
+* hover labels,
+* click selection,
+* smooth cinematic camera travel,
+* dimming of unrelated realities,
+* highlighted nexus connection,
+* accessible HTML reality selector,
+* keyboard navigation,
+* compact contextual information,
+* return-to-nexus interaction.
+
+Add approximately seven or eight total realities or dimensions.
+
+Possible set:
+
+* Sacred Timeline / Earth-616,
+* Earth-838,
+* the TVA,
+* the Void,
+* the Quantum Realm,
+* the Dark Dimension,
+* a *What If...?* branch,
+* a collapsing incursion reality.
+
+Do not create seven copies of the same transparent sphere with different colours.
+
+Each must differ through some combination of:
+
+* geometry,
+* internal silhouettes,
+* orbit structure,
+* particle behaviour,
+* surface animation,
+* atmosphere,
+* debris,
+* lighting,
+* motion.
+
+---
+
+# Vertical Slice 3 – Nexus States
+
+Add three global multiverse states.
+
+## Stable
+
+* calm orbiting,
+* clean blue and gold energy paths,
+* controlled nexus pulses,
+* minimal anomalies,
+* smooth reality motion.
+
+## Branching
+
+* timeline paths divide into multiple strands,
+* additional particles appear,
+* selected realities drift slightly,
+* violet and amber accents appear,
+* nexus activity increases.
+
+## Incursion
+
+* two realities begin moving toward one another,
+* their paths interfere,
+* cracks or distortion appear,
+* warning pulses increase,
+* debris is pulled between them,
+* nexus energy becomes unstable.
+
+Transitions must be animated transformations of the same scene.
+
+Do not load a separate page for each state.
+
+---
+
+# Vertical Slice 4 – Trigger Nexus Event
+
+Add one replayable cinematic interaction:
+
+```text
+Trigger Nexus Event
+```
+
+Suggested sequence:
+
+1. the nexus emits a large pulse,
+2. one stable reality branches,
+3. a second dimensional sphere appears,
+4. the new branch becomes unstable,
+5. its timeline path flickers and fractures,
+6. another universe begins reacting to it,
+7. the interface offers:
+
+   * Stabilize branch,
+   * Isolate branch.
+
+If the user stabilizes it:
+
+* the path reconnects,
+* the sphere stops shaking,
+* its energy returns to a stable state,
+* the nexus calms.
+
+If the user isolates it:
+
+* the connection is severed,
+* the branch drifts away,
+* its light slowly dims,
+* the remaining multiverse stabilizes.
+
+The sequence should last approximately 10–15 seconds.
+
+Keep the interaction visually dramatic but mechanically simple.
+
+Use deterministic behaviour so the sequence can be tested reliably.
+
+---
+
+# Vertical Slice 5 – Cinematic Journey
+
+Add a short guided journey through the experience.
+
+Use either:
+
+* explicit chapter controls,
+* a guided camera sequence,
+* or carefully implemented scroll progression.
+
+Suggested chapters:
+
+1. The Sacred Timeline
+2. The Timeline Branches
+3. The TVA Observes
+4. The Void Awaits
+5. An Incursion Begins
+6. Return to the Nexus
+
+Each chapter should:
+
+* move the camera,
+* emphasize a different scene element,
+* change lighting or particles,
+* show only one short line of text,
+* preserve user orientation.
+
+Do not make the page excessively long.
+
+The entire guided journey should take approximately two to four minutes.
+
+---
+
+# Vertical Slice 6 – Polish and Deployment
+
+Finish with:
+
+* refined animation curves,
+* restrained post-processing,
+* loading sequence,
+* skippable intro,
+* reduced-motion behaviour,
+* mobile simplification,
+* weaker-device mode,
+* accessibility review,
+* performance tuning,
+* final visual inspection,
+* GitHub Pages deployment,
+* documentation.
+
+---
+
+# Execution rules
+
+After creating the vertical-slice plan, begin Slice 1 immediately.
+
+Do not wait for approval unless a real external blocker exists.
+
+For every slice:
+
+1. implement the complete slice,
+2. run TypeScript validation,
+3. run the production build,
+4. visually inspect it when browser or screenshot tools are available,
+5. fix obvious composition and layout problems,
+6. update the vertical-slice plan with completion notes,
+7. keep the application working,
+8. then continue to the next slice.
+
+Do not partially build every slice at once.
+
+A fully completed early slice is better than an unfinished version of the whole specification.
+
+---
+
+# Opening sequence
+
+Create a short cinematic opening.
+
+Suggested sequence:
+
+1. start in darkness,
+2. reveal distant stars,
+3. particles begin moving toward the centre,
+4. the nexus core activates,
+5. mechanical rings rotate into position,
+6. timeline energy spreads outward,
+7. dimensional realities become visible,
+8. transition into interactive mode.
+
+Duration:
+
+* approximately 5–8 seconds.
+
+Requirements:
+
+* skippable,
+* disabled or simplified for reduced motion,
+* must not replay on every resize,
+* must not block the page if an animation fails,
+* must transition smoothly into the default camera position.
+
+Avoid copying the Marvel Studios intro.
+
+---
+
+# Technology
+
+Use:
+
+* Vite,
+* TypeScript,
+* Three.js,
+* semantic HTML,
+* modern CSS.
+
+GSAP may be used for:
+
+* intro sequencing,
+* camera travel,
+* nexus-event sequencing,
+* guided chapters,
+* ScrollTrigger if scroll storytelling is selected.
+
+Only add GSAP when it materially simplifies cinematic sequencing.
+
+Other lightweight dependencies may be used only when justified.
+
+Do not use:
+
+* React,
+* Angular,
+* a backend,
+* authentication,
+* external runtime APIs,
+* a heavy UI framework,
+* large downloaded 3D environments,
+* proprietary character models,
+* paid assets.
+
+The project must work with:
+
+```bash
+npm install
+npm run dev
+npm run typecheck
+npm run build
+```
+
+Add the `typecheck` script if necessary.
+
+Enable strict TypeScript.
+
+Avoid `any`.
+
+---
+
+# MCU scene data
+
+Use typed local data.
+
+Keep the initial content deliberately small and curated.
+
+```ts
+type RealityState =
+  | "stable"
+  | "branching"
+  | "unstable"
+  | "incursion"
+  | "isolated"
+  | "collapsed";
+
+type RealityType =
+  | "universe"
+  | "timeline"
+  | "realm"
+  | "dimension"
+  | "temporal-location";
+
+interface McuReality {
+  id: string;
+  name: string;
+  shortName: string;
+  type: RealityType;
+  shortDescription: string;
+  state: RealityState;
+  stability: number;
+
+  relatedProjects: string[];
+  notableCharacters: string[];
+  notableEvents: string[];
+
+  visualStyle:
+    | "sacred-timeline"
+    | "alternate-earth"
+    | "tva"
+    | "void"
+    | "quantum"
+    | "dark-dimension"
+    | "animated-branch"
+    | "incursion";
+
+  accentColor: string;
+  secondaryColor: string;
+  position: [number, number, number];
+  scale: number;
+
+  canonConfidence:
+    | "confirmed"
+    | "partially-confirmed"
+    | "interpretive";
+}
+```
+
+The same dataset must drive:
+
+* scene creation,
+* labels,
+* selection,
+* information panels,
+* mode transitions,
+* nexus-event behaviour.
+
+Do not hard-code separate reality names inside scene logic.
+
+Keep descriptions original and short.
+
+Do not copy text from Marvel, Disney, Wikipedia, IMDb, or MCU fan wikis.
+
+---
+
+# Visual direction
+
+The attached mockup is the primary composition reference.
+
+Aim for:
+
+* deep cosmic space,
+* strong depth,
+* a central radiant nexus,
+* orbiting dimensional worlds,
+* large circular machinery,
+* layered energy pathways,
+* luminous nebula haze,
+* reality fragments,
+* controlled visual symmetry,
+* a premium cinematic finish.
+
+Suggested palette:
+
+* near-black,
+* midnight blue,
+* cold cyan,
+* electric blue,
+* violet,
+* restrained gold,
+* amber warnings,
+* limited red for critical states.
+
+The nexus must remain the brightest and most visually important element.
+
+Avoid:
+
+* generic startup design,
+* giant marketing typography,
+* random particle effects,
+* excessive lens flares,
+* excessive bloom,
+* constant screen shake,
+* oversaturated rainbow colours,
+* glass panels covering the scene,
+* normal dashboard layouts,
+* dozens of unreadable UI labels.
+
+The result should feel like a cinematic multiverse observatory, not like a Three.js tutorial.
+
+---
+
+# Central nexus implementation
+
+Build the nexus procedurally using combinations of:
+
+* layered spheres,
+* transparent shells,
+* additive materials,
+* animated shader noise,
+* concentric Torus geometry,
+* mechanical ring segments,
+* particle emitters,
+* energy beams,
+* temporal ribbons,
+* light pulses.
+
+Use different rotation speeds and axes to create depth.
+
+Keep rotation controlled and elegant.
+
+Avoid rotating every object continuously at the same speed.
+
+The nexus should support visual states:
+
+* idle,
+* focused,
+* branching,
+* unstable,
+* incursion,
+* stabilizing.
+
+---
+
+# Reality visual implementations
+
+Create each reality using an appropriate procedural visual language.
+
+## Sacred Timeline / Earth-616
+
+Possible characteristics:
+
+* blue-green Earth-like sphere,
+* subtle golden temporal shell,
+* clean direct path to the nexus,
+* calm atmosphere,
+* protected orbital ring.
+
+## Earth-838
+
+Possible characteristics:
+
+* advanced clean city silhouettes,
+* brighter cool-blue atmosphere,
+* geometric transit patterns,
+* distinct orbital structures.
+
+## TVA
+
+Possible characteristics:
+
+* retro-futuristic station,
+* amber temporal glow,
+* mechanical architecture,
+* clock and timeline-inspired forms,
+* positioned outside normal orbit patterns.
+
+## The Void
+
+Possible characteristics:
+
+* dark wasteland fragments,
+* broken monuments,
+* floating debris,
+* green temporal mist,
+* decaying timeline remains.
+
+Do not recreate recognizable copyrighted landmarks in detail.
+
+## Quantum Realm
+
+Possible characteristics:
+
+* layered microscopic landscape,
+* internal glowing organisms,
+* impossible scale,
+* colourful but controlled depth,
+* particles moving both inward and outward.
+
+## Dark Dimension
+
+Possible characteristics:
+
+* folded geometry,
+* kaleidoscopic structures,
+* fragmented surfaces,
+* unnatural rotation,
+* purple-red energy.
+
+## What If...? Branch
+
+Possible characteristics:
+
+* stylized graphic shading,
+* stronger outlines,
+* animated reality layer,
+* distinctive cel-inspired treatment.
+
+## Incursion Reality
+
+Possible characteristics:
+
+* cracked dimensional shell,
+* unstable energy,
+* collapsing geometry,
+* debris moving toward another universe,
+* intersecting timeline paths.
+
+These should be cinematic interpretations, not exact reproductions of film scenes.
+
+---
+
+# Interactions
+
+## Pointer parallax
+
+Add subtle camera response to pointer position.
+
+It must:
+
+* remain bounded,
+* not cause motion sickness,
+* not interfere with camera transitions,
+* be reduced on touch devices.
+
+## Hover
+
+When hovering a reality:
+
+* slightly scale it,
+* strengthen its atmosphere,
+* illuminate its timeline connection,
+* show its name and stability,
+* update the cursor.
+
+Avoid sudden movements.
+
+## Selection
+
+When selecting a reality:
+
+* smoothly move the camera toward it,
+* keep some visual relationship to the nexus,
+* reduce unrelated visual noise,
+* highlight its timeline path,
+* show a compact detail panel,
+* enable one contextual action.
+
+Selection should feel like entering a cinematic observation mode.
+
+## Return
+
+The user must be able to return through:
+
+* visible Return to Nexus control,
+* Escape,
+* clicking empty space where appropriate.
+
+The return transition must restore the original composition cleanly.
+
+---
+
+# Camera design
+
+Use a cinematic camera system.
+
+Required:
+
+* carefully composed default view,
+* smooth focused transitions,
+* bounded exploration,
+* no unrestricted scene spinning,
+* stable resize behaviour,
+* no possibility of losing the scene.
+
+OrbitControls are optional.
+
+If used:
+
+* disable panning,
+* restrict zoom,
+* restrict polar angles,
+* reduce rotation speed,
+* suspend them during cinematic transitions.
+
+Prefer authored camera transitions over unrestricted control.
+
+---
+
+# UI design
+
+Keep the interface sparse.
+
+Default state:
+
+* small Multiverse Nexus title,
+* current state,
+* Trigger Nexus Event button,
+* subtle interaction hint,
+* discreet reality navigation control.
+
+Selected state:
+
+* short reality name,
+* one or two sentence description,
+* stability,
+* up to three MCU references,
+* one action,
+* Return to Nexus.
+
+Use:
+
+* thin lines,
+* restrained translucent backgrounds,
+* small status indicators,
+* clear typography,
+* subtle technical details,
+* compact panels.
+
+Avoid:
+
+* sidebars full of links,
+* wiki layouts,
+* large navigation headers,
+* cards for every universe,
+* long text blocks,
+* conventional dashboards.
+
+On mobile:
+
+* use a compact bottom panel,
+* simplify effects,
+* reduce labels,
+* preserve the cinematic view,
+* keep controls reachable.
+
+---
+
+# Audio
+
+Audio is optional.
+
+Do not include copyrighted music or film audio.
+
+If audio is added:
+
+* use generated or original ambient sounds,
+* start muted,
+* provide a clear sound control,
+* do not autoplay loud audio,
+* synchronize subtle pulses with nexus events.
+
+The experience must remain complete without audio.
+
+---
+
+# Performance
+
+Target:
+
+* smooth experience on a modern normal laptop,
+* acceptable simplified performance on integrated graphics,
+* a reduced mobile scene.
+
+Required optimizations:
+
+* clamp device pixel ratio,
+* reduce effects based on device capability,
+* reuse vectors and temporary objects,
+* avoid per-frame allocations,
+* use instancing where useful,
+* reduce transparent overdraw,
+* limit post-processing,
+* stop or reduce animation when the tab is hidden,
+* properly dispose of resources,
+* resize efficiently,
+* avoid large textures,
+* use procedural visuals where practical.
+
+Do not add expensive post-processing before the core composition works.
+
+Bloom, chromatic effects, or distortion should be restrained.
+
+---
+
+# Accessibility
+
+Provide:
+
+* semantic buttons,
+* keyboard-operable reality selection,
+* visible focus states,
+* Escape to return,
+* reduced-motion support,
+* sufficient text contrast,
+* WebGL fallback message,
+* simple HTML reality selector,
+* alternative text representation of selected reality data.
+
+Essential navigation must not depend entirely on raycasting.
+
+---
+
+# Architecture
+
+Use a modular structure similar to:
+
+```text
+src/
+  main.ts
+  styles.css
+
+  data/
+    realities.ts
+
+  state/
+    nexusState.ts
+    actions.ts
+
+  scene/
+    createScene.ts
+    createNexus.ts
+    createReality.ts
+    createRealitySystem.ts
+    createTimelinePaths.ts
+    createParticles.ts
+    lighting.ts
+    postProcessing.ts
+
+  realities/
+    createSacredTimeline.ts
+    createEarth838.ts
+    createTva.ts
+    createVoid.ts
+    createQuantumRealm.ts
+    createDarkDimension.ts
+    createAnimatedBranch.ts
+    createIncursionReality.ts
+
+  interaction/
+    raycasting.ts
+    cameraController.ts
+    pointerController.ts
+    keyboardController.ts
+
+  simulation/
+    nexusEvent.ts
+    realityTransitions.ts
+    incursionSequence.ts
+
+  animation/
+    introSequence.ts
+    cameraTimelines.ts
+    guidedJourney.ts
+
+  ui/
+    createInterface.ts
+    realityPanel.ts
+    realitySelector.ts
+    loadingScreen.ts
+    globalControls.ts
+
+  utils/
+    deviceCapabilities.ts
+    dispose.ts
+    math.ts
+```
+
+Adjust the structure when necessary, but keep these concerns separate:
+
+* rendering,
+* scene objects,
+* state,
+* interactions,
+* camera,
+* simulation,
+* UI,
+* animation.
+
+Do not create one massive file.
+
+---
+
+# GitHub Pages
+
+Configure the project for project-based GitHub Pages URLs such as:
+
+```text
+https://username.github.io/multiverse-nexus/
+```
+
+Do not assume root hosting.
+
+Configure the Vite base path correctly.
+
+Create:
+
+```text
+.github/workflows/deploy.yml
+```
+
+The workflow must:
+
+* run on pushes to `main`,
+* install dependencies using `npm ci`,
+* run type validation,
+* run the production build,
+* upload `dist`,
+* deploy using official GitHub Pages actions.
+
+Do not require a manually maintained `gh-pages` branch.
+
+Document required repository settings in the README.
+
+---
+
+# README
+
+Create a concise but complete README containing:
+
+* project overview,
+* visual goal,
+* feature list,
+* screenshot placeholder,
+* technology stack,
+* local development,
+* build instructions,
+* GitHub Pages deployment,
+* controls,
+* folder structure,
+* performance notes,
+* accessibility notes,
+* explanation of procedural visual assets,
+* MCU fan-project disclaimer.
+
+Do not turn the README into an encyclopedia of MCU content.
+
+---
+
+# Validation and review
+
+After each vertical slice:
+
+```bash
+npm run typecheck
+npm run build
+```
+
+Fix all:
+
+* TypeScript errors,
+* build errors,
+* broken imports,
+* asset-path errors,
+* major console warnings,
+* scene initialization errors,
+* responsive layout problems.
+
+When browser automation or screenshot tools are available:
+
+1. run the application,
+2. capture the default desktop view,
+3. capture a selected-reality view,
+4. capture a mobile view,
+5. compare the result to the attached mockup,
+6. fix weak visual hierarchy,
+7. fix excessive empty space,
+8. fix unreadable UI,
+9. fix visual noise,
+10. verify that the nexus remains the focal point.
+
+Ask during visual review:
+
+* Does this look like a cinematic multiverse experience?
+* Are the realities visually distinct?
+* Is the central nexus dominant?
+* Does selection feel dramatic?
+* Does it look like an original premium demo?
+* Does anything still look like a generic Three.js particle tutorial?
+* Is there too much text?
+* Are UI panels obscuring the main visual?
+
+Do not claim the project is visually polished without inspecting it when inspection tools are available.
+
+---
+
+# Priority order
+
+If the full specification cannot be completed in one pass, prioritize:
+
+1. stable working build,
+2. convincing central nexus,
+3. strong composition matching the mockup,
+4. three visually distinct realities,
+5. hover and selection,
+6. cinematic camera movement,
+7. timeline connections,
+8. Trigger Nexus Event sequence,
+9. additional realities,
+10. guided journey,
+11. final polish.
+
+Do not replace important functionality with TODO comments.
+
+Do not ask for approval between normal implementation decisions.
+
+Make reasonable decisions and document meaningful deviations.
+
+Begin now by:
+
+1. inspecting the repository,
+2. reading the attached `/prototype` skill,
+3. analysing the attached mockup,
+4. creating `docs/vertical-slice-plan.md`,
+5. implementing and validating Vertical Slice 1.
